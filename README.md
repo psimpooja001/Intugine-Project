@@ -5,6 +5,12 @@
 - to start the the program, run `npm start`
 - open in browser - `http://localhost:3000/`
 
+# Screenshots
+![Alt text](Screenshots/Index.png?raw=true)
+![Alt text](Screenshots/Shipment_Record_Data.png?raw=true)
+![Alt text](Screenshots/Tile_1.png?raw=true)
+![Alt text](Screenshots/Dropdown.png?raw=true)
+
 # Project Details
 
 The design is for a shipment dashboard where the various shipments are shown which are going through various vendors like FedEx, Bluedart etc.. The dashboard shows these shipments, give their current status by a timeline view, and there are some counters which shows the number of shipments which are in a particular state e.g. DEL (Delivered), INT (In Transit), OOD (Out for Delivery) etc….
