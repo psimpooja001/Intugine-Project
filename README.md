@@ -29,7 +29,7 @@ The design is for a shipment dashboard where the various shipments are shown whi
 
 
 # Data sample
-
+```
 {
     "data": [
 
@@ -164,10 +164,9 @@ The design is for a shipment dashboard where the various shipments are shown whi
         },
 
 ……
-
     ]
-
 }
+```
 
 # Notes
 - Design - https://intugine-hiring.s3.ap-south-1.amazonaws.com/FrontendDesign.pdf
