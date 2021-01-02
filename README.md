@@ -1,31 +1,36 @@
-##The design is for a shipment dashboard where the various shipments are shown which are going through various vendors like FedEx, Bluedart etc.. The dashboard shows these shipments, give their current status by a timeline view, and there are some counters which shows the number of shipments which are in a particular state e.g. DEL (Delivered), INT (In Transit), OOD (Out for Delivery) etc….
+# How to view the project
+- This is a reactJS program, so make sure to have it installed on your local machine, along with Node.
+- clone the repository on your local machine.
+- from root folder, run this command to install all the dependencies `npm install`
+- to start the the program, run `npm start`
+- open in browser - `http://localhost:3000/`
+
+# Project Details
+
+The design is for a shipment dashboard where the various shipments are shown which are going through various vendors like FedEx, Bluedart etc.. The dashboard shows these shipments, give their current status by a timeline view, and there are some counters which shows the number of shipments which are in a particular state e.g. DEL (Delivered), INT (In Transit), OOD (Out for Delivery) etc….
+
+- Replicate the Design [1][2].
+- Use API endpoint [3] to fetch Shipments and show them in the right hand tabular view [1].
+- HTTP Method - POST
+- The API requires some data to be passed in various places in the API which are :-
+ 1. `Bearer Token - tTU3gFVUdP`
+ 2. `Body - {email: [your_email_address] e.g. {email: “mayankmittal@intugine.com”}}`
+
+- Response contains “data” key which is an array which will be used for the data. Shown in Data sample below.
+- Calculate the counter values from the data using ‘current_status_code’ in the shipment data.
+- Table View (RIght)
+- On selecting different status counter ( 3rd point ) show shipments of the selected status.
+- Use filtered data based on selected counter e.g. DEL, INT, OOD.
+- DEL (Delivered) counter will be selected by default.
+- Timeline View [1] (Left)
+- Use `scan` array in the shipment data for this.
+- The no. of elements in the timeline will be same as of `scan` array length
+- Each element within the timeline view will contain the data which is available in individual elements of the `scan` array and mentioned in the Data sample below.
 
 
-Replicate the Design [1][2].
-Use API endpoint [3] to fetch Shipments and show them in the right hand tabular view [1].
-HTTP Method - POST
- The API requires some data to be passed in various places in the API which are :-
-Bearer Token - tTU3gFVUdP
-Body - {email: [your_email_address] e.g. {email: “mayankmittal@intugine.com”}}
-
-Response contains “data” key which is an array which will be used for the data. Shown in Data sample below.
-Calculate the counter values from the data using ‘current_status_code’ in the shipment data.
-Table View (RIght)
-On selecting different status counter ( 3rd point ) show shipments of the selected status.
-Use filtered data based on selected counter e.g. DEL, INT, OOD.
-DEL (Delivered) counter will be selected by default.
-Timeline View [1] (Left)
-Use `scan` array in the shipment data for this.
-The no. of elements in the timeline will be same as of `scan` array length
-Each element within the timeline view will contain the data which is available in individual elements of the `scan` array and mentioned in the Data sample below.
-
-
-Data sample
-
-
+# Data sample
 
 {
-
     "data": [
 
         {
@@ -164,9 +169,7 @@ Data sample
 
 }
 
-
-Notes
-
-Design - https://intugine-hiring.s3.ap-south-1.amazonaws.com/FrontendDesign.pdf
-Assets - https://intugine-hiring.s3.ap-south-1.amazonaws.com/FrontendAssets.zip
-API Endpoint for fetching Shipments - https://f0ztti2nsk.execute-api.ap-south-1.amazonaws.com/v1/consignment/fetch
+# Notes
+- Design - https://intugine-hiring.s3.ap-south-1.amazonaws.com/FrontendDesign.pdf
+- Assets - https://intugine-hiring.s3.ap-south-1.amazonaws.com/FrontendAssets.zip
+- API Endpoint for fetching Shipments - https://f0ztti2nsk.execute-api.ap-south-1.amazonaws.com/v1/consignment/fetch
